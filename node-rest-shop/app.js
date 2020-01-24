@@ -14,6 +14,7 @@ mongoose.connect('mongodb+srv://masquad:0Zitgy3Hbc4muoXJ@masquad-8grnl.mongodb.n
 mongoose.Promise = global.Promise;
 
 app.use(morgan('dev'));
+app.use('/uploads', express.static('uploads'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
